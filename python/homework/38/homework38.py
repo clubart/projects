@@ -5,10 +5,12 @@ for num1 in range(1, 11):
     print('\n')
 
 my_rand = random.randint(1, 11)
-try:
-    num = int(input('Guess a number from 1-10 '))
-except ValueError as e:
-    print(e)
+while True:
+    try:
+        num = int(input('Guess a number from 1-10 '))
+        break
+    except ValueError as e:
+        print(e)
 while num != my_rand:
     if num < my_rand:
         print('too low')
