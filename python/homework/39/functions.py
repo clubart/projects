@@ -1,5 +1,5 @@
 def days_in_month_list():
-    months = ['janurary', 'feburary', 'march', 'april', 'may', 'june', 'july', 'august', 'september',
+    months = ['january', 'feburary', 'march', 'april', 'may', 'june', 'july', 'august', 'september',
               'october', 'november', 'december']
     days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     for months, days in zip(months, days):
@@ -7,7 +7,7 @@ def days_in_month_list():
 
 
 def days_in_month_tupple():
-    months = ('janurary', 'feburary', 'march', 'april', 'may', 'june', 'july', 'august', 'september',
+    months = ('january', 'feburary', 'march', 'april', 'may', 'june', 'july', 'august', 'september',
               'october', 'november', 'december')
     days = 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
     for months, days in zip(months, days):
@@ -16,7 +16,7 @@ def days_in_month_tupple():
 
 def days_in_month_dict(month):
     days_in_month = {
-        'janurary': 31,
+        'january': 31,
         'feburary': 28,
         'march': 31,
         'april': 30,
@@ -34,5 +34,5 @@ def days_in_month_dict(month):
 
 
 days_in_month_list()
-days_in_month_dict('april')
+days_in_month_dict('April')
 days_in_month_tupple()
