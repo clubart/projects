@@ -1,0 +1,51 @@
+html {
+    background-color: gray;
+}
+
+body{
+    background-color: lightgray;
+    max-width: 900px;
+    margin: auto;
+    padding-left: 4em;
+    padding-right: 4em;
+    text-align: justify;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    padding-top: 0em;
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+header h1 {
+    color: white;
+    font-style: italic;
+    text-shadow: 2px 2px 2px red;
+}
+
+header h2{
+    color: white;
+}
+
+a {
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+h3{
+    color: blue;
+    font-size: 25px;
+}
