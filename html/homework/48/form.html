@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="css/restaurant.css">
+    <link rel="icon" href="/homework/45/images/restaurant.jpg">
+    <style>
+        div {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div input {
+            margin-top: 10px;
+        }
+
+        .feedback {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        span input {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <h1>Delicious Foods</h1>
+        <h2>1111 Madison Ave. <br>
+            Lakewood NJ, 08701 <br>
+            (732)333-8766</h2>
+    </header>
+
+    <nav class="returnLinks">
+        <a href="index.html" id="homeLink">click to return to home</a>
+    </nav>
+
+    <form action="feedback.php" action="post">
+        <div>
+            <input type="text" name="firstName" placeholder="First Name">
+            <input type="text" name="lastName" placeholder="Last Name" minlength="3" maxlength="10">
+            <input type="email" name="email" placeholder="email" required>
+
+        </div>
+        <div class="feedback">
+            <label for="dateVisited"></label>Date Visited:<input type="date" name="dateVisited" id="dateVisited">
+            <label for="rating"></label>How did you enjoy your meal on a scale of 1-10:<input type="range" name="rating"
+                id="rating" min="1" max="10">
+            <span>
+                <label for="poll">Would you reccomend us to a friend?</label>
+                <input type="radio" name="poll" value="yes" checked>Yes
+                <input type="radio" name="poll" value="no">No
+                <input type="radio" name="poll" value="maybe">Maybe
+            </span>
+            <span>
+                <label for="sides">Which course did you enjoy?</label>
+                <input type="checkbox" name="sides" value="salads">Salads
+                <input type="checkbox" name="sides" value="appetizers">Appetizers
+                <input type="checkbox" name="sides" value="main">Main
+            </span>
+            <textarea placeholder="comments"></textarea>
+            <input type="submit">
+        </div>
+    </form>
+
+</body>
+
+</html>

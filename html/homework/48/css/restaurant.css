@@ -1,0 +1,170 @@
+html {
+    background-color: gray;
+}
+
+body{
+    background-color: lightgray;
+    max-width: 900px;
+    margin: auto;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 1.3em;
+    text-align: justify;
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    padding-top: 1em;
+    padding-bottom: 1em
+}
+
+header h1 {
+    color: white;
+    font-style: italic;
+    text-shadow: 2px 2px 2px red;
+    font-family: 'Special Elite', cursive;
+}
+
+header h2{
+    color: white;
+}
+
+a {
+    font-weight: bold;
+    color: green;
+    text-decoration: none;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: purple;
+}
+
+p {
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+h3{
+    color: blue;
+    font-size: 25px;
+}
+
+ul{
+    list-style: none;
+    background-image: url("/homework/45/images/Salad.jpg");
+    
+}
+
+.textBox{
+    background-color: beige;
+}
+
+video {
+    width: 45%;
+}
+
+li h3{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+.menu {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#menu1 {
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+}
+
+.goToTop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: gray;
+    margin: auto; 
+    width: 100%;
+    text-align: right;
+}
+
+.description {
+    width: 50%;
+}
+
+@font-face {
+    font-family: 'Special Elite';
+    src: url("/homework/46/fonts/SpecialElite-Regular.ttf");
+}
+
+.returnLinks {
+    background-color: rgb(214, 112, 22);
+}
+
+#menuLink {
+    float: right;
+}
+
+@media screen and (max-width: 1046px){
+.goToTop{
+   background-color: unset;
+}
+
+body {
+    margin-bottom: 0;
+}
+}
+
+table {
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 2em;
+    border: 1px solid black;
+    border-bottom: none;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-weight: bold;
+    color: darkmagenta;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: .5em;
+    text-align: center;
+}
+
+tr :first-child{
+font-weight: bold;
+color: darkmagenta;
+}
+
+ tbody tr:nth-child(odd) {
+    background-color: aliceblue;
+}
+
+tbody tr:hover {
+    background-color: lightblue;
+}
+
+div > h4{
+    margin: 0;
+    font-size: 1.3em;
+}
+
+a h3:first-letter {
+    font-size: 2em;
+}
+
+a:last-child:not(footer nav a) {
+    float: right;
+}
