@@ -14,7 +14,7 @@ function uppercase(letter) {
     return letter === letter.toUpperCase();
 }
 
-let letters = ['a', 'B', 'c'];
+let letters = ['A', 'b', 'C'];
 
 console.log('all are uppercase:', ourEvery(letters, uppercase));
 console.log('all are lowercase', ourEvery(letters, letter => letter !== letter.toUpperCase()));
@@ -31,13 +31,13 @@ function ourSome(arr, callback) {
     return false;
 }
 
-function notUppercaseSome(letter) {
+function UppercaseSome(letter) {
     return letter === letter.toUpperCase();
 }
 
-console.log('some are uppercase:', ourSome(letters, notUppercaseSome));
+console.log('some are uppercase:', ourSome(letters, UppercaseSome));
 console.log('some are lowercase:', ourSome(letters, letter => letter !== letter.toUpperCase()));
-console.log('some are uppercase:', letters.some(notUppercaseSome));
+console.log('some are uppercase:', letters.some(UppercaseSome));
 console.log('some are lowercase:', letters.some(letter => letter !== letter.toUpperCase()));
 
 /////   3
