@@ -1,13 +1,15 @@
 const interestCalculator = (function () {
     'use strict';
+    let rate;
     return {
         setRate: function (interestRrate) {
-            return interestRrate;
+            rate = interestRrate;
+           // return interestRrate;
         },
         setYears: function(amtyears){
             return amtyears;
         },
-        calculateInterest: function(year, rate, principle){
+        calculateInterest: function(year, principle){
             return (year*rate*principle)/100;
         }
     };
