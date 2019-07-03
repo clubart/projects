@@ -1,6 +1,6 @@
-window.Myapp = window.Myapp || {};
+var Myapp = Myapp || {};
 
-window.Myapp.daysUtils = (function (theModule) {
+Myapp.daysUtils = (function (theModule) {
     'use strict';
     const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'shabbos'];
     theModule.getDayName = function (index) {
@@ -18,7 +18,7 @@ window.Myapp.daysUtils = (function (theModule) {
         return 'No such day';
     };
     return theModule;
-}(window.Myapp.daysUtils || {}));
+}(Myapp.daysUtils || {}));
 
-console.log(window.Myapp.daysUtils.getDayName(5));
-console.log(window.Myapp.daysUtils.getDayNumber('friDay'));
+console.log(Myapp.daysUtils.getDayName(5));
+console.log(Myapp.daysUtils.getDayNumber('friDay'));

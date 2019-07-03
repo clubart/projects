@@ -1,9 +1,9 @@
-window.Myapp = window.Myapp || {};
+var Myapp = Myapp || {};
 
-window.Myapp.stringCase = (function (theModule) {
+Myapp.stringCase = (function (theModule) {
     'use strict';
     theModule.stringCaseInsensitiveEquals = (string1, string2) => string1.toUpperCase() === string2.toUpperCase();
     return theModule;
-}(window.Myapp.stringCase || {}));
+}(Myapp.stringCase || {}));
 
-console.log(window.Myapp.stringCase.stringCaseInsensitiveEquals('apple', 'hello'));
+console.log(Myapp.stringCase.stringCaseInsensitiveEquals('apple', 'hello'));
