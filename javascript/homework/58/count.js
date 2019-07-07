@@ -1,16 +1,16 @@
 (function () {
     'use strict';
     for (let i = 0; i < 10; i++) {
-        app.counter();
+        window.app.counter();
     }
-    console.log('single counter is at ', app.getCurrentCount());
+    console.log('single counter is at ', window.app.getCurrentCount());
 
-    const counter1 = app.createCounter();
+    const counter1 = window.app.createCounter();
     for (let i = 0; i < 5; i++) {
         counter1.counter();
     }
 
-    const counter2 = app.createCounter();
+    const counter2 = window.app.createCounter();
     for (let i = 0; i < 15; i++) {
         counter2.counter();
     }
