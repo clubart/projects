@@ -21,9 +21,9 @@
     }
 
     function colors(element, property) {
-        var r = Math.floor(Math.random() * 255);
-        var g = Math.floor(Math.random() * 255);
-        var b = Math.floor(Math.random() * 255);
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
         element.style[property] = "rgb(" + r + "," + g + "," + b + ")";
     }
 
