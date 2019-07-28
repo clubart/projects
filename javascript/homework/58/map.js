@@ -11,7 +11,6 @@
 
     const numArray = [2, 4, 6];
 
-    //console.log(map(numArray, doubleTheNumber));
     console.log('new array', map(numArray, number => number *= 2));
     console.log('old array', numArray);
 }());

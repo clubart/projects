@@ -2,7 +2,6 @@
     'use strict';
 
     let d = new Date();
-    //let hour = d.toLocaleString('en-US', { hour: 'numeric', hour12: true });
     let hour = d.getHours() % 12 || 12;
     let minute = d.getMinutes();
     let second = d.getSeconds();
@@ -46,7 +45,6 @@
             }
             minute = 0;
         }
-        //clockDiv.innerHTML = hour + ":" + minute + ":" + second;
         setTime();
     }, 1000);
 }());

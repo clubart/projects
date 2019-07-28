@@ -31,7 +31,6 @@ window.pcs.messageBox = (function () {
 
             button.addEventListener('click', () => {
                 if (--numberOfOpenMessages === 0) {
-                    //if (!--numberOfOpenMessages) {
                     currentLeftOffset = initialLeftOffset;
                     currentTopOffset = initialTopOffset;
                 }
