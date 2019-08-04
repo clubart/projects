@@ -2,11 +2,10 @@
 (function () {
     'use strict';
 
-    $('#loadButton').click(() => {
-        const userInput = $('#fileInput').val();
-        const mySpinner = $('<img src="spinner.png"></img>')
-            .prependTo($(document.body))
-            .css('position', 'fixed')
+    const userInput = $('#fileInput').val();
+    const mySpinner = $('<img src="spinner.png"></img>')
+        .prependTo($(document.body))
+        .css('position', 'fixed')
             .css('top', '50')
             .css('right', '50');
         setTimeout(() => {
