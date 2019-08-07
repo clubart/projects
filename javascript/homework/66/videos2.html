@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-auto-columns: 500px 1fr;
+            grid-gap: 1em;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: burlywood;
+            grid-column: 1 / 3;
+        }
+
+        video {
+            grid-column: 2 / auto;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Videos</h1>
+    <ul id="myVideos"></ul>
+    <video id="showVideo" controls></video>
+
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="messageBox.js"></script>
+    <script src="videos2.js"></script>
+</body>
+
+</html>
