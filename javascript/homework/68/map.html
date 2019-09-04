@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #showMap {
+            height: 500px;
+            width: 500px;
+            display: inline-block;
+        }
+        #results {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="formInput">
+        <input id="userInput">
+        <button id="searchButton">search</button>
+    </div>
+    <div id="results"></div>
+    <div id="showMap"></div>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUFnqmtlTj0X9WqRbs69-WYagEoyH8VfQ" async
+        defer></script>
+    <script src="map.js"></script>
+</body>
+
+</html>
