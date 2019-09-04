@@ -30,6 +30,7 @@
     }
 
     searchButton.click(() => {
+        results.empty();
         fetch(`http://api.geonames.org/wikipediaSearch?q=${userInput.val()}&maxRows=10&username=clubart&type=json`)
             .then(r => {
                 if (r.ok) {
@@ -41,9 +42,9 @@
             .then(cities => {
                 createMap();
                 cities.geonames.forEach(city => {
-                    results.append(`<h4>${city.title}</h4>`)
+                    results.append(`<h4>${city.title}</h4> <img src="${city.thumbnailImg}">`)
                         .click(rt => {
-                            
+
                         });
                     createMarkers(city);
                 });
