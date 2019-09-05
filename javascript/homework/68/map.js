@@ -42,9 +42,9 @@
             .then(cities => {
                 createMap();
                 cities.geonames.forEach(city => {
-                    results.append(`<h4>${city.title}</h4> <img src="${city.thumbnailImg}">`)
-                        .click(rt => {
-
+                    results.append(` <img src="${city.thumbnailImg}"><h4>${city.title}</h4>`)
+                        .click(() => {
+                            map.setCenter({ lat: city.lat, lng: city.lng });
                         });
                     createMarkers(city);
                 });
