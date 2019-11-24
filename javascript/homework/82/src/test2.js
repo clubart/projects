@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './test.css';
 
 const blogList = $('#blogList');
@@ -7,7 +8,6 @@ const postDiv = $('#postDiv');
 const prev = $('#prev');
 const next = $('#next');
 const returnButton = $('#returnButton');
-const commentList = $('#commentList');
 
 async function displayData(url) {
     try {
@@ -36,15 +36,14 @@ function getPosts(post, first, last) {
          ${post[i].body}</p>
          </li>`);
         const commentsButton = $(`<button>show comments</button>`);
+        const commentList = $(`<ul><h4>Comments</h4></ul>`);
         postList.append(postDisplay);
-        commentsButton.appendTo(postList);
+        commentsButton.appendTo(postDisplay);
         postDiv.show();
         commentsButton.click(() => {
             if (!comments) {
                 comments = true;
                 commentsButton.html('hide comments');
-                const commentsHeader = $('<h4>Comments</h4>');
-                commentList.append(commentsHeader);
                 displayData(`https://jsonplaceholder.typicode.com/comments?postId=${post[i].id}`)
                     .then(comments => {
                         comments.forEach(comment => {
@@ -53,7 +52,7 @@ function getPosts(post, first, last) {
                             ${comment.name}<br>
                             ${comment.email}<br>
                             ${comment.body}<br></p></li>`);
-                            commentList.append(commentDisplay)
+                            commentList.append(commentDisplay);
                             postDisplay.append(commentList);
                         })
                     })
@@ -70,7 +69,7 @@ postDiv.hide();
 displayData('https://jsonplaceholder.typicode.com/users')
     .then(blogs => {
         blogs.forEach(blog => {
-            const blogDisplay = $(`<li><h4>${blog.name}</h4>
+            const blogDisplay = $(`<li class="col-3"><h4>${blog.name}</h4>
             <div>${blog.website}</div>
             <p>${blog.company.name}<br>
             ${blog.company.catchPhrase}<br>
@@ -88,11 +87,11 @@ displayData('https://jsonplaceholder.typicode.com/users')
                             let lastPost = 3;
                             getPosts(postArray, firstPost, lastPost);
                             next.click(() => {
-                                if(lastPost < posts.length){
+                                if (lastPost < posts.length) {
                                     firstPost = lastPost;
                                     lastPost += 3;
                                 }
-                                    postList.empty();
+                                postList.empty();
                                 getPosts(postArray, firstPost, lastPost);
                             });
                             prev.click(() => {

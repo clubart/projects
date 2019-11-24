@@ -4,3 +4,6 @@
 li{
     list-style-type: none;
 }
+.col-3{
+    cursor: pointer;
+}
