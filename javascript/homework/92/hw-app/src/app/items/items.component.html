@@ -1,0 +1,6 @@
+<h3>Items</h3>
+<ul>
+    <li *ngFor="let item of items">{{item.name}} {{item.price}}</li>
+</ul>
+
+<div *ngIf="items?.length">No items found</div>

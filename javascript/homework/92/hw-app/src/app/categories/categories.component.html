@@ -1,0 +1,6 @@
+<h2>Choose a category</h2>
+<select (change)="showItems($event.target.value)">
+    <option *ngFor="let category of categories">{{category.name}}</option>
+</select>
+<hr />
+<app-items [items]="selected?.items"></app-items>
