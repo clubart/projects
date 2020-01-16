@@ -1,0 +1,10 @@
+<h1>Weather</h1>
+<span>Enter a zip: </span>
+<input [(ngModel)]="zipInput">
+<a [routerLink]="['/weather', zipInput]" >
+<button >Get Weather</button>
+</a>
+<hr />
+<!--div *ngIf="weather | async as weather">
+    <app-weather-display [weather]="weather"></app-weather-display>
+</div-->
