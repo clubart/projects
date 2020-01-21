@@ -33,6 +33,8 @@
         seeAllButton.prop('disabled', false);
         $.getJSON(`https://api.flickr.com/services/feeds/photos_public.gne?tags=${tagText.val()}&format=json&jsoncallback=?`)
             .done(picture => {
+                allPicsDiv.hide();
+                pictureDiv.show();
                 picIndex = 0;
                 tagText.val('');
                 picTitle.text(picture.items[picIndex].title);
@@ -57,6 +59,7 @@
 
                 seeAllButton.click(() => {
                     pictureDiv.css('display', 'none');
+                    allPicsDiv.show();
                     picture.items.forEach(pics => {
                         const pic = $(`<div><h4>${pics.title}</h4> <img src="${pics.media.m}"><div/>`);
                         allPicsDiv.append(pic);
