@@ -11,7 +11,7 @@
     function createMap() {
         map = new google.maps.Map(document.getElementById('showMap'), {
             center: { lat: 40.096068191437205, lng: -74.222168870743332 },
-            zoom: 13,
+            zoom: 4,
             mapTypeId: google.maps.MapTypeId.SATELLITE
         });
     }
@@ -42,9 +42,10 @@
             .then(cities => {
                 createMap();
                 cities.geonames.forEach(city => {
-                    results.append(` <img src="${city.thumbnailImg}"><h4>${city.title}</h4>`)
+                    $(` <img src="${city.thumbnailImg}"><h4>${city.title}</h4>`).appendTo(results)
                         .click(() => {
-                            map.setCenter({ lat: city.lat, lng: city.lng });
+                            map.panTo({ lat: city.lat, lng: city.lng });
+                            map.setZoom(18);
                         });
                     createMarkers(city);
                 });
