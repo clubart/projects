@@ -1,0 +1,36 @@
+body {
+    background-color: lightblue;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+#input {
+    text-align: center;
+    border: 2px solid black;
+    width: 40%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 1em;
+    background-color: aliceblue;
+}
+
+#allPics{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#pictures{
+    display: grid;
+    grid-template-columns: 140px 1fr 140px;
+}
+
+.arrow {
+    cursor: pointer;
+    font-size: 10em;
+    user-select: none;
+}
+
+

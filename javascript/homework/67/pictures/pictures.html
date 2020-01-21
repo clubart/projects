@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="pictures.css">
+</head>
+
+<body>
+    <h1>Pictures</h1>
+    <div id="input">
+        <input type="text" id="tagText">
+        <button id="button">get pics</button>
+        <button id="seeAllButton" disabled>view all pics</button>
+    </div>
+    <h3 id="category"></h3>
+
+    <div id="pictures">
+        <!--img src="leftArrow.png" id="leftArrow" class="arrow"-->
+        <span id="leftArrow" class="arrow">&lsaquo;</span>
+        <div>
+            <h4 id="picTitle"></h4>
+            <img id="picDisplay">
+            <div id="numOfPic"></div>
+        </div>
+        <!--img src="rightArrow.png" id="rightArrow" class="arrow"-->
+        <span id="rightArrow" class="arrow">&rsaquo;</span>
+    </div>
+    <div id="allPics"></div>
+
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script src="pictures.js"></script>
+</body>
+
+</html>
