@@ -1,0 +1,7 @@
+<li>
+    {{#cart}}
+    <ul>
+        {{name}}
+    </ul>
+    {{#/cart}}
+</li>
