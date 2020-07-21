@@ -19,13 +19,13 @@ export default ({ ticker }) => {
                     }
                 )
             })
-    });
+    },[companyInfoDisplay]);
 
     return (
         <div>
             <h2>{companyInfoDisplay.name} - {ticker}</h2>
             <div >{companyInfoDisplay.description}</div>
-            <a href="${companyInfoDisplay.website}">click to view website</a>
+            <a href={`http://${companyInfoDisplay.website}`}>click to view website</a>
         </div>
     );
 }

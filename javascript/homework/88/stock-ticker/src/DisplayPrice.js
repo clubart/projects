@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 export default ({ ticker }) => {
     const [priceDisplay, setPriceDisplay] = useState({});
     useEffect(() => {
-        //setInterval(()=>{
         fetch(`https://api-v2.intrinio.com/securities/${ticker}/prices/realtime?api_key=OjBhNjdiMzZhZTczZmMzM2ZjN2MxMzA5OTM4NDA1NGJi`) 
         .then(response => {
                 if (!response.ok) {
@@ -19,8 +18,7 @@ export default ({ ticker }) => {
                     }
                 )
             })
-        //},10000)
-    });
+    },[priceDisplay]);
 
     return (
         <div >Price: ${priceDisplay.lastPrice} {priceDisplay.lastUpdate}</div>

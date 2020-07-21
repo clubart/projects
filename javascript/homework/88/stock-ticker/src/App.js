@@ -4,6 +4,7 @@ import Header from './Header';
 import CompanyInput from './CompanyInput';
 import DisplayPrice from './DisplayPrice';
 import DisplayCompanyInfo from './DisplayCompanyInfo';
+import CompanyList from './CompanyList';
 
 function App() {
   const [ticker, setTicker] = useState('')
