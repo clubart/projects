@@ -1,0 +1,7 @@
+body{
+    background-color: beige;
+}
+#homeb tn {
+    display: flex;
+    align-items: center;
+}
